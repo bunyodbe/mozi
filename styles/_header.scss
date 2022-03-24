@@ -1,0 +1,138 @@
+// Header
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  padding: 32px 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  z-index: 1000000;
+  transition: 0.3s;
+
+  &--navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav {
+      display: flex;
+      align-items: center;
+      .nav--list {
+        display: flex;
+        li {
+          &:not(:last-child) {
+            margin-right: 60px;
+          }
+          a {
+            font-size: 18px;
+            font-weight: 400;
+            color: $text-color;
+            transition: 0.2s;
+            &:hover {
+              color: $red-color;
+            }
+          }
+        }
+      }
+      .btn {
+        margin-left: 30px;
+      }
+    }
+    .nav--icon {
+      display: none;
+      cursor: pointer;
+      i {
+        font-size: 30px;
+        color: $main-color;
+      }
+    }
+  }
+  .close-btn {
+    display: none;
+  }
+}
+
+.header.on-scroll {
+  padding: 15px 0 !important;
+}
+
+// Responsive
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 15px 0;
+    .header--navbar__logo {
+      img {
+        width: 100px;
+      }
+    }
+  }
+
+  .header--navbar__nav .nav--list li {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header.on-scroll {
+    padding: 5px 0 !important;
+  }
+
+  .header {
+    padding: 10px 0;
+  }
+  .header .close-btn {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    i {
+      font-size: 25px;
+      color: #fff;
+    }
+  }
+  .header--navbar .nav--icon {
+    display: block;
+  }
+  .header--navbar__nav {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    right: -300px;
+    background-color: $main-color;
+    flex-direction: column;
+    padding-top: 100px;
+    transition: 0.3s;
+  }
+
+  .header--navbar__nav .nav--list {
+    flex-direction: column;
+    li {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-bottom: 25px;
+      a {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+
+  .header--navbar__nav .btn {
+    margin-left: 0;
+    font-size: 16px;
+  }
+}
+
+// Open nav
+
+.open-nav {
+  right: 0 !important;
+}

@@ -1,0 +1,124 @@
+// Footer
+
+.footer {
+  padding: 55px 0 38px;
+  background-color: #0d123c;
+  .footer--banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .logo {
+      margin-bottom: 25px;
+    }
+    .text {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27px;
+      color: #fff;
+      max-width: 280px;
+    }
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      .right--item {
+        &:not(:last-child) {
+          margin-right: 100px;
+        }
+        &__title {
+          font-size: 18px;
+          line-height: 21px;
+          font-weight: 400;
+          color: #ffffff;
+          margin-bottom: 30px;
+        }
+        &__links {
+          display: flex;
+          flex-direction: column;
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #fff;
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        &__socials {
+          display: flex;
+          a {
+            display: block;
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+            i {
+              font-size: 18px;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .subfooter {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(197, 203, 226, 0.5);
+    .subfooter--banner {
+      display: flex;
+      justify-content: space-between;
+      a,
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 991px) {
+  .footer .footer--banner__right .right--item:not(:last-child) {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer .footer--banner__left {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer .footer--banner__right .right--item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .footer .footer--banner__right .right--item__title {
+    margin-bottom: 20px;
+  }
+
+  .footer .footer--banner__right .right--item__links a:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer .subfooter .subfooter--banner a,
+  .footer .subfooter .subfooter--banner span {
+    font-size: 14px;
+  }
+
+  .footer .footer--banner .logo {
+    margin-bottom: 15px;
+    img {
+      width: 100px;
+    }
+  }
+}
